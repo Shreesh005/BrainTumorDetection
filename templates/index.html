@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/index.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Brain Tumor Detection</h1>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="uploadfile">Upload the image of Your MRI</label>
+            <input type="file" name="uploadfile" id="fileupload" required>
+            <br>
+            <br>
+            <input type="checkbox" name="agreement" id="agreement" required>
+            <label for="agreement">This app is using Artificial Intelligence hence real result and prediction may contradict. However the model has an accuracy of 88.532%</label>
+            <br>
+            <br>
+            <button value="Predict" class="btn btn-primary">PREDICT</button>
+        </form>
+    </div>
+</body>
+</html>
